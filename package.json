@@ -1,0 +1,19 @@
+{
+  "name": "battlewatch-vr",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5188",
+    "preview": "vite preview --host 127.0.0.1 --port 4188",
+    "serve": "python -m http.server 5188"
+  },
+  "dependencies": {
+    "playwright": "^1.59.1",
+    "procedural-gl": "^1.0.19",
+    "three": "^0.161.0"
+  },
+  "devDependencies": {
+    "vite": "^8.0.3"
+  }
+}

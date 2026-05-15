@@ -1,0 +1,133 @@
+{
+  "state": {
+    "coordinateSystem": "local ship deck uses x right, y up, z aft; negative z points toward the bow",
+    "mode": "desktop",
+    "shipLoaded": true,
+    "shipLoadError": null,
+    "islandLoaded": true,
+    "islandLoadError": null,
+    "audio": {
+      "unlocked": true,
+      "ambienceLoaded": true,
+      "ambienceStarted": true,
+      "bombardmentLoaded": true,
+      "muted": false,
+      "audioError": null
+    },
+    "binoculars": false,
+    "player": {
+      "x": -4.4,
+      "y": -0.14,
+      "z": 28,
+      "yaw": -1.18,
+      "pitch": -0.02
+    },
+    "walkDeck": {
+      "xMin": -6.2,
+      "xMax": 6.2,
+      "zMin": -55,
+      "zMax": 54
+    },
+    "battle": {
+      "phase": "playing",
+      "wave": 1,
+      "score": 0,
+      "hull": 100,
+      "kills": 0,
+      "escaped": 0,
+      "shotsFired": 0,
+      "shotsHit": 0,
+      "activeEnemyCount": 5,
+      "waveSpawned": 5,
+      "waveQuota": 7,
+      "shoreFlashes": 2,
+      "skyBursts": 1,
+      "tracers": 1,
+      "enemies": [
+        {
+          "id": "7f0cf555-744e-4d91-b2af-33866dde8255",
+          "health": 1,
+          "progress": 0.35,
+          "x": -87.7,
+          "y": -3.1,
+          "z": -4.4,
+          "distanceToShip": 77.8
+        },
+        {
+          "id": "999ca930-7838-4861-ab8f-36fbbb39b942",
+          "health": 1,
+          "progress": 0.28,
+          "x": -109.6,
+          "y": -3.5,
+          "z": 18.2,
+          "distanceToShip": 98
+        },
+        {
+          "id": "4b4087ea-3e4d-4074-9547-e531acec6a7b",
+          "health": 1,
+          "progress": 0.2,
+          "x": -116.4,
+          "y": -3.3,
+          "z": 42.2,
+          "distanceToShip": 104.2
+        },
+        {
+          "id": "21c81fea-349f-4e5e-a990-3ed6bfc4b246",
+          "health": 1,
+          "progress": 0.12,
+          "x": -115.5,
+          "y": -3.6,
+          "z": -8.9,
+          "distanceToShip": 106
+        },
+        {
+          "id": "9bdb85cc-a8ca-439b-ae51-1198281d6601",
+          "health": 1,
+          "progress": 0.04,
+          "x": -137.3,
+          "y": -3.6,
+          "z": 41.1,
+          "distanceToShip": 125.1
+        }
+      ]
+    }
+  },
+  "consoleMessages": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "warning",
+      "text": "WebGL: CONTEXT_LOST_WEBGL: loseContext: context lost"
+    },
+    {
+      "type": "log",
+      "text": "THREE.WebGLRenderer: Context Lost."
+    },
+    {
+      "type": "log",
+      "text": "THREE.WebGLRenderer: Context Restored."
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0xa24001aba00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0xa24001aba00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0xa24001aba00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0xa24001aba00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    }
+  ]
+}

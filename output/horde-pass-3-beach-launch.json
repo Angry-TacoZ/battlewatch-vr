@@ -1,0 +1,98 @@
+{
+  "state": {
+    "coordinateSystem": "local ship deck uses x right, y up, z aft; negative z points toward the bow",
+    "mode": "desktop",
+    "shipLoaded": true,
+    "shipLoadError": null,
+    "islandLoaded": true,
+    "islandLoadError": null,
+    "audio": {
+      "unlocked": true,
+      "ambienceLoaded": true,
+      "ambienceStarted": true,
+      "bombardmentLoaded": true,
+      "muted": false,
+      "audioError": null
+    },
+    "binoculars": false,
+    "player": {
+      "x": -4.4,
+      "y": 0.13,
+      "z": 46,
+      "yaw": 0.42,
+      "pitch": 0.08
+    },
+    "walkDeck": {
+      "xMin": -6.2,
+      "xMax": 6.2,
+      "zMin": -55,
+      "zMax": 54
+    },
+    "battle": {
+      "phase": "playing",
+      "wave": 1,
+      "score": 0,
+      "hull": 100,
+      "kills": 0,
+      "escaped": 0,
+      "shotsFired": 0,
+      "shotsHit": 0,
+      "activeEnemyCount": 2,
+      "waveSpawned": 2,
+      "waveQuota": 7,
+      "shoreFlashes": 3,
+      "skyBursts": 0,
+      "tracers": 1,
+      "enemies": [
+        {
+          "id": "e6d01f4b-00c3-473a-869c-89c2932fe452",
+          "health": 1,
+          "progress": 0.16,
+          "x": -117,
+          "y": -3.2,
+          "z": -38,
+          "distanceToShip": 111.5
+        },
+        {
+          "id": "b7ba709b-9d3b-4eff-a260-26ad16c8dc91",
+          "health": 1,
+          "progress": 0.08,
+          "x": -96.9,
+          "y": -0.1,
+          "z": -46,
+          "distanceToShip": 96.3
+        }
+      ]
+    }
+  },
+  "consoleMessages": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x79c001a6000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x79c001a5a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x79c001a5a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    }
+  ]
+}

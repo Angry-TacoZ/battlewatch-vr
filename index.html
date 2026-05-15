@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battlewatch VR</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="hud">
+      <div class="hud__header">
+        <div>
+          <div class="hud__eyebrow">North Atlantic, 1943</div>
+          <h1>Battlewatch: Breakwater</h1>
+        </div>
+        <button class="hud__mute" type="button" aria-pressed="false">Mute</button>
+      </div>
+      <p class="hud__intro">Hold the rail and cut down assault boats before they can reach HMS London.</p>
+      <div class="hud__stats">
+        <div class="hud__stat">
+          <span>Wave</span>
+          <strong data-hud-wave>1</strong>
+        </div>
+        <div class="hud__stat">
+          <span>Score</span>
+          <strong data-hud-score>0</strong>
+        </div>
+        <div class="hud__stat">
+          <span>Contacts</span>
+          <strong data-hud-contacts>0</strong>
+        </div>
+      </div>
+      <div class="hud__meter">
+        <span>Hull</span>
+        <div class="hud__meter-track">
+          <div class="hud__meter-fill" data-hud-hull-bar></div>
+        </div>
+        <strong data-hud-hull>100%</strong>
+      </div>
+      <div class="hud__status" data-hud-status>Shore contacts forming in the moonlight.</div>
+      <div class="hud__controls">WASD move · Drag mouse look · Tap click or Space fire · B binoculars · R restart · F fullscreen · VR left stick move, trigger fire</div>
+      <div class="hud__subtle">Use the built-in button to enter VR on supported headsets. Audio wakes on first click or key press.</div>
+      <div class="hud__credits">Ship model: HMS London by philano, licensed CC Attribution.</div>
+    </div>
+    <div class="game-banner" data-hud-banner hidden></div>
+    <div class="crosshair" aria-hidden="true">
+      <span class="crosshair__ring"></span>
+      <span class="crosshair__x"></span>
+      <span class="crosshair__y"></span>
+    </div>
+    <div class="vignette"></div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
+

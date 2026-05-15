@@ -1,0 +1,181 @@
+{
+  "initialState": {
+    "coordinateSystem": "local ship deck uses x right, y up, z aft; negative z points toward the bow",
+    "mode": "desktop",
+    "shipLoaded": true,
+    "shipLoadError": null,
+    "islandLoaded": true,
+    "islandLoadError": null,
+    "audio": {
+      "unlocked": true,
+      "ambienceLoaded": true,
+      "ambienceStarted": true,
+      "bombardmentLoaded": true,
+      "muted": false,
+      "audioError": null
+    },
+    "binoculars": false,
+    "player": {
+      "x": -4.4,
+      "y": 0.09,
+      "z": 46,
+      "yaw": 0.42,
+      "pitch": 0.08
+    },
+    "walkDeck": {
+      "xMin": -6.2,
+      "xMax": 6.2,
+      "zMin": -55,
+      "zMax": 54
+    },
+    "battle": {
+      "phase": "playing",
+      "wave": 1,
+      "score": 0,
+      "hull": 100,
+      "kills": 0,
+      "escaped": 0,
+      "shotsFired": 1,
+      "shotsHit": 0,
+      "activeEnemyCount": 1,
+      "waveSpawned": 1,
+      "waveQuota": 7,
+      "shoreFlashes": 2,
+      "skyBursts": 1,
+      "tracers": 1,
+      "enemies": [
+        {
+          "id": "90b11a5c-dc26-400e-97e9-76d10c0fb480",
+          "health": 1,
+          "progress": 0.02,
+          "x": -145.6,
+          "y": -3.3,
+          "z": 14.4,
+          "distanceToShip": 134.2
+        }
+      ]
+    }
+  },
+  "afterAdvance": {
+    "coordinateSystem": "local ship deck uses x right, y up, z aft; negative z points toward the bow",
+    "mode": "desktop",
+    "shipLoaded": true,
+    "shipLoadError": null,
+    "islandLoaded": true,
+    "islandLoadError": null,
+    "audio": {
+      "unlocked": true,
+      "ambienceLoaded": true,
+      "ambienceStarted": true,
+      "bombardmentLoaded": true,
+      "muted": false,
+      "audioError": null
+    },
+    "binoculars": false,
+    "player": {
+      "x": -4.4,
+      "y": -0.19,
+      "z": 46,
+      "yaw": 0.42,
+      "pitch": 0.08
+    },
+    "walkDeck": {
+      "xMin": -6.2,
+      "xMax": 6.2,
+      "zMin": -55,
+      "zMax": 54
+    },
+    "battle": {
+      "phase": "playing",
+      "wave": 1,
+      "score": 0,
+      "hull": 100,
+      "kills": 0,
+      "escaped": 0,
+      "shotsFired": 1,
+      "shotsHit": 0,
+      "activeEnemyCount": 4,
+      "waveSpawned": 4,
+      "waveQuota": 7,
+      "shoreFlashes": 2,
+      "skyBursts": 1,
+      "tracers": 1,
+      "enemies": [
+        {
+          "id": "90b11a5c-dc26-400e-97e9-76d10c0fb480",
+          "health": 1,
+          "progress": 0.33,
+          "x": -103.4,
+          "y": -3.6,
+          "z": 16.9,
+          "distanceToShip": 92
+        },
+        {
+          "id": "86fa4015-3c03-4bc7-9d61-7ec88ec5d657",
+          "health": 1,
+          "progress": 0.23,
+          "x": -115.8,
+          "y": -3,
+          "z": 15.2,
+          "distanceToShip": 104.4
+        },
+        {
+          "id": "0d2b1ca4-8b9e-472f-ab8a-1e6ef4699468",
+          "health": 1,
+          "progress": 0.14,
+          "x": -129.1,
+          "y": -3.6,
+          "z": 14.2,
+          "distanceToShip": 117.8
+        },
+        {
+          "id": "a891f323-cb84-4622-b95b-7612d5e4dfc6",
+          "health": 1,
+          "progress": 0.07,
+          "x": -139.1,
+          "y": -3.5,
+          "z": 18.9,
+          "distanceToShip": 127.4
+        }
+      ]
+    }
+  },
+  "consoleMessages": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "warning",
+      "text": "WebGL: CONTEXT_LOST_WEBGL: loseContext: context lost"
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "log",
+      "text": "THREE.WebGLRenderer: Context Lost."
+    },
+    {
+      "type": "log",
+      "text": "THREE.WebGLRenderer: Context Restored."
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x88c03caa200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x88c03caa200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x88c03caa200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x88c03caa200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    }
+  ]
+}

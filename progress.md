@@ -1,0 +1,57 @@
+Original prompt: Create a small Three.js WW2-style sailor-on-a-boat battle demo that works in both desktop monitor mode and VR, and place it in its own git workspace under sessions/projects.
+
+- Created isolated workspace at `C:\Users\angry\.codex\sessions\projects\battlewatch-vr`.
+- Chose a no-build static setup so the demo can run from a simple localhost server.
+- Implemented an initial placeholder scene, desktop controls, VR toggle, and test loop hooks.
+- Copied `hms_london.glb` into `assets/` for local loading.
+- Replaced the placeholder with the real `HMS London` model and added a moonlit ocean, procedural island silhouette, and shore bombardment effects.
+- Added a local Vite development setup with `npm run dev` on `http://127.0.0.1:5188`.
+- Verified the localhost scene with Playwright screenshots and adjusted lighting/spawn framing so the ship and coastline read clearly.
+- Upgraded the ocean with a shader-enhanced moon reflection, fresnel tinting, and shoreline energy.
+- Imported `assets/island_coast.glb` from `C:\Users\angry\Downloads\uploads_files_3960684_paysage+lac+et+montaigne.glb` and staged it behind the fallback coastline silhouette.
+- Verified the local scene repeatedly with Playwright screenshots after the water and island passes.
+- Added local audio assets for low-volume looping ocean ambience and shore bombardment thuds synced with island flash events.
+- Verified in a local browser pass that audio unlocks on first interaction and the ambience loop starts only after the browser allows playback.
+- Identified the large dark water artifact as the fallback procedural island geometry, not the imported island mesh.
+- Changed the island flow so the imported island is used by default and the fallback coastline only appears if the asset fails to load.
+- Reworked the moon and flash events from solid geometry into additive glow sprites, which removes the cardboard-disc look in the night sky.
+- Lowered the desktop player eye height to better match the ship scale.
+- Added simple deck collision blockers for the main turret positions so the player no longer walks straight through them.
+- Expanded the blocker map to cover more obvious centerline ship structures while keeping the side walkway open.
+- Verified locally that the player can still move along the side deck but is stopped from pushing through the aft centerline structure zone.
+- Reduced the player collision radius so narrow side-deck passages are more navigable without losing the centerline structure blocking.
+- Reworked the ocean pass to reduce the plastic sheen: darker base water, rougher response, broken-up moon reflection, and a procedural bump texture for surface breakup.
+- Added subtle water motion that keys off the ship roll and pitch so the water nearest the hull echoes the ship movement instead of feeling disconnected.
+- Caught and fixed a vertex shader injection bug during browser verification where `transformed` was referenced before declaration.
+- Re-verified the local scene with Playwright screenshots after the water pass; the browser render now loads cleanly with the updated ocean and no new shader errors.
+- Swapped the renderer and scene lighting toward the official three.js physical-lighting approach: Reinhard tone mapping, leaner moon/sky lighting, and realistic `decay = 2` falloff on practical/search lights.
+- Removed the previous broad cheat-fill lights and replaced them with a smaller physical-style rig built around moonlight plus a few local practicals on the ship.
+- Retuned the island/ship searchlights and bombardment flash intensities so they still read under the new tone mapping and falloff model.
+- Verified the lighting rewrite in the running local demo with fresh Playwright screenshots; no new runtime errors appeared beyond the normal screenshot-related WebGL context reset warnings.
+- Rebuilt the ocean surface again using generated height and normal textures plus layered shader noise inspired by the official three.js water examples, while keeping the existing WebGL + VR-compatible renderer path.
+- Upgraded the wave motion to use broader directional swells, finer chop, side wake, and ship-coupled disturbance so the sea reads with more structure from deck level.
+- Verified the "best water" pass in a local browser capture from an angled deck view; the water now shows visible moving structure without introducing new shader/runtime errors.
+- Added a clickable mute toggle inside the top-left HUD that controls both the looping ocean ambience and bombardment thud mix from one button.
+- Verified locally that the mute button updates the live audio state, switches its label between `Mute` and `Unmute`, and stays usable inside the otherwise non-interactive HUD panel.
+- Fixed the side-deck edge leak where the player could stand beyond the rail line because movement still used one broad rectangular walk bound.
+- Replaced the old fixed x clamp with a small z-based walk profile so the playable strip follows the ship fencing more closely as the deck shape changes along the hull.
+- Verified locally with side-deck screenshots that the player now stays inside the rail line on the tested walkway path.
+- Fixed a hallway collision bug where a full-width structure blocker was still covering a visible side passage, creating an invisible wall that pushed the player into the building to get through.
+- Added explicit side-passage carve-outs in the obstacle logic for the midship hallway band so the visible corridor remains traversable without opening the centerline structures.
+- Replaced the hand-authored deck blocker system with mesh-driven collision checks against the ship model itself: downward support tests for walkable deck and forward wall probes for solid walls/rails.
+- Reduced the player collision radius and widened the broad fallback bounds so deck accessibility now comes primarily from the actual ship geometry instead of rectangular approximations.
+- Added a small hidden debug hook for local verification and used it to confirm a large connected reachable midship deck band plus doorway traversal through the previously blocked passage zone.
+- Strengthened superstructure collision again by switching the raycast target set to invisible double-sided collision proxies, plus multi-height wall-path and body-clearance checks around the player center.
+- Ran targeted local probes and a sampled midship occupancy grid after the proxy/clearance update to confirm the deck still remains traversable while edge rails continue to read as blocked.
+- Tuned the player body profile for narrow under-deck lanes by lowering the eye height, slightly shrinking the collision radius, and reducing clearance/path probe heights so overhangs and diagonal braces stop overblocking passable corridors.
+- Re-verified the sampled side-lane under-deck moves after the height/clearance adjustment; the tested narrow lane remains traversable while the rail edge still reads as blocked.
+- Pivoted the demo toward a WW2 horde-survival loop while keeping the existing ship/ocean/VR foundation.
+- Reworked the HUD into a survival overlay with wave, score, contact count, hull meter, centered crosshair, and a transient battle banner.
+- Added a playable combat state layer in `src/main.js`: wave progression, hull integrity, score/kills/accuracy tracking, restart flow, player firing, hit registration, impact bursts, and enemy assault-boat pooling.
+- Added simple enemy assault boats that advance toward the ship, can be shot, damage the ship on contact, and expose their live state through `render_game_to_text` plus debug helpers.
+- Added desktop firing via quick click or `Space`, kept drag-look, and added VR trigger firing alongside the existing left-stick movement.
+- Verified locally with Playwright that the new survival loop boots, the HUD updates, enemies spawn, and no new hard runtime errors appear beyond expected headless WebGL context-reset/readback warnings.
+- Adjusted the assault routes so enemy boats now originate on the island beach and transition through a short launch leg before entering open water, matching the desired “coming off the shore” attack pattern more closely than the first offshore version.
+- Verified in local state output that at least one early-wave enemy now remains above water during the launch leg, confirming the beach-origin path is active.
+- Remaining rough edge: the inherited player spawn/view from the old atmospheric demo still does a poor job of framing the new beach assault, and quick camera sweeps showed several candidate deck poses still looking into ship structure instead of out toward the shoreline attack lane.
+- Next: choose or build a deliberate combat spawn/view lane that naturally faces the beach launches, and retune route endpoints/visibility once that framing is set.
